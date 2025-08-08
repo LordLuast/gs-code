@@ -1,11 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo de Filmes</title>
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #eee;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #ff6f61;
+    }
+
+    .catalog {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .movie-card {
+      background: #1f1f1f;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+    }
+
+    .movie-img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .movie-info {
+      padding: 15px;
+    }
+
+    .movie-title {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #ff6f61;
+    }
+
+    .movie-genre {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    .movie-desc {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
-    
+
+  <h1>Catálogo de Filmes</h1>
+
+  <div class="catalog">
+
+    <div class="movie-card">
+      <img class="movie-img" src="https://m.media-amazon.com/images/I/81aA7hEEykL._AC_SY679_.jpg" alt="Inception" />
+      <div class="movie-info">
+        <h2 class="movie-title">A Origem (Inception)</h2>
+        <p class="movie-genre">Ficção Científica / Ação</p>
+        <p class="movie-desc">Um ladrão que invade os sonhos das pessoas recebe a missão de plantar uma ideia na mente de um alvo.</p>
+      </div>
+    </div>
+
+    <div class="movie-card">
+      <img class="movie-img" src="https://upload.wikimedia.org/wikipedia/pt/c/c3/Interstellar_film_poster.jpg" alt="Interestelar" />
+      <div class="movie-info">
+        <h2 class="movie-title">Interestelar</h2>
+        <p class="movie-genre">Ficção Científica / Drama</p>
+        <p class="movie-desc">Um grupo de exploradores viaja pelo espaço em busca de um novo lar para a humanidade.</p>
+      </div>
+    </div>
+
+    <div class="movie-card">
+      <img class="movie-img" src="https://upload.wikimedia.org/wikipedia/pt/3/35/Matrix_Poster.jpg" alt="Matrix" />
+      <div class="movie-info">
+        <h2 class="movie-title">Matrix</h2>
+        <p class="movie-genre">Ficção Científica / Ação</p>
+        <p class="movie-desc">Um hacker descobre que a realidade é uma simulação e luta contra o controle das máquinas.</p>
+      </div>
+    </div>
+
+    <div class="movie-card">
+      <img class="movie-img" src="https://upload.wikimedia.org/wikipedia/pt/8/86/The_Godfather_1972_film_poster.jpg" alt="O Poderoso Chefão" />
+      <div class="movie-info">
+        <h2 class="movie-title">O Poderoso Chefão</h2>
+        <p class="movie-genre">Crime / Drama</p>
+        <p class="movie-desc">A história da família mafiosa Corleone e seu império no mundo do crime.</p>
+      </div>
+    </div>
+
+  </div>
+
 </body>
 </html>
